@@ -1,0 +1,50 @@
+{
+  "name": "MISP",
+  "version": "1.0",
+  "author": "VVX7",
+  "url": "https://github/com/VVX7",
+  "license": "AGPL-V3",
+  "description": "Create or update a MISP Event (including Case Tags, Galaxy Tags, Observable Tags).",
+  "dataTypeList": ["thehive:case"],
+  "command": "MISP/MISP.py",
+  "baseConfig": "MISP",
+  "config": {},
+  "configurationItems": [
+    {
+      "name": "thehive_url",
+      "description": "TheHive host url",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "thehive_secret",
+      "description": "TheHive api token",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "misp_url",
+      "description": "MISP host url",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "misp_secret",
+      "description": "MISP api token",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "filtered_tags",
+      "description": "Do not send these (comma delimited) tags to MISP.",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": "NiFi"
+    }
+  ]
+}
